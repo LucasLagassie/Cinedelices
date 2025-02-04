@@ -1,0 +1,68 @@
+@use "../../styles/variables" as v;
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .modal-content {
+    background: #fff;
+    position: fixed;
+    top: 1rem;
+    right: 1em;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: v.$color-red;
+  }
+  // Modale d'affichage de la Navbar
+.modal-content .navbar-list {
+  display: flex;
+  flex-direction: column;
+}
+
+ul .navbar-list {
+  margin: 0;
+  padding: 0;
+}
+
+
+nav.modal-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+
+// Styles pour mobile first (petits écrans) - Menu burger visible, Navbar cachée
+
+// Media query pour les grands écrans (par exemple, à partir de 768px)
+@media (min-width: 760px) {
+
+ .modal-overlay {
+   display: none; /* Cache la modale */
+ }
+}
+  

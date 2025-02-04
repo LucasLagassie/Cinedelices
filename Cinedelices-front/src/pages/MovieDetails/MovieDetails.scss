@@ -1,0 +1,106 @@
+@use '../../styles/_variables' as v;
+@use '../../styles/reset';
+@use '../../styles/_fonts' as f;
+
+.container {
+    padding: 1rem;
+}
+
+.container-informations {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem;
+}
+
+.informations {
+    background-color: v.$color-yellow;
+    border-radius: 1rem;
+    width: 40%;
+    flex-direction: column;
+    display: block;
+    justify-content: left;
+    padding-top: 1rem;
+    
+    li {
+        margin:0;
+        margin-top: 2rem;
+        font-size: 100%;
+    }span {
+        // margin-top: 2rem;
+        font-weight: bold;
+    }
+}
+
+.synopsis {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.synopsis {
+    font-size: f.$font-size-h3;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.genres {
+    font-size: f.$font-size-h3; 
+    font-weight: bold;
+    li {
+        text-transform: uppercase;
+    }
+}
+
+.second-container-movie {
+    background-color: v.$color-yellow;
+    min-height: 70vh;
+    
+
+    .recipes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        
+
+    .card-detail {
+    
+    width: 18.75rem;
+    height: 18.75rem;
+    margin-top: 3rem;
+    position: relative;
+    a {
+        margin: 1rem; 
+    } 
+    h3{
+        font-family: f.$font-roboto;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+    .card-detail img {
+    aspect-ratio: 1 /1;
+    width: 100%;
+}
+    }
+}
+
+
+h2 {
+    font-size: f.$font-size-h2;
+    padding: 1rem;
+}
+
+.otherRecipes {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+h3 {
+    font-size: f.$font-size-h3;
+    padding: 1rem;
+}
+

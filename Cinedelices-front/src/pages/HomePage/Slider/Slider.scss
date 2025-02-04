@@ -1,0 +1,113 @@
+@use "../../../styles/fonts" as f;
+@use "../../../styles/reset";
+@use "../../../styles/variables" as v;
+
+.slick-slider {
+  position: relative;
+  margin: 0 auto; /* Centre le conteneur */
+  padding: 0;
+  width: 80%; /* Taille du conteneur ajustée à 80% de l'écran */
+  max-width: 800px; /* Limite la largeur du conteneur */
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 60vh; 
+    min-height: 0vh; 
+    width: auto; 
+    max-width: 90%; 
+    object-fit: contain; 
+    display: block; 
+    margin: 0 auto; 
+  }
+}
+
+/* Flèches de navigation */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; /* Taille légèrement plus grande pour une meilleure visibilité */
+  height: 24px;
+  background-color: v.$color-light-grey;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem; 
+  line-height: 22px;
+
+  &:hover {
+    background-color: v.$color-light-yellow;
+  }
+}
+
+.slick-prev {
+  left: 1rem; 
+}
+
+.slick-next {
+  right: 1rem; 
+}
+
+/* Points de navigation */
+.slick-dots {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li {
+  margin: 0 4px; 
+}
+
+.slick-dots li button {
+  border: none;
+  background-color: v.$color-light-grey;
+  width: 0.6rem; 
+  height: 0.6rem; 
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0; 
+}
+
+.slick-dots li.slick-active button {
+  background-color: v.$color-grey;
+}
+
+.slick-dots li.slick-active button:hover {
+  background-color: v.$color-yellow;
+}
+
+/* Adaptation pour les grands écrans */
+@media (min-width: 780px) {
+  .slick-slider {
+    width: 60%; /* Réduit encore la taille du conteneur pour les grands écrans */
+  }
+
+  .slick-arrow {
+    width: 28px; /* Augmente légèrement la taille des flèches sur les grands écrans */
+    height: 28px;
+  }
+}

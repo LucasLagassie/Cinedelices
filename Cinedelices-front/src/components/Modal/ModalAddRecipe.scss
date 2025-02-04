@@ -1,0 +1,105 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Fond sombre et semi-transparent */
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Effet de flou pour une touche moderne */
+  overflow: hidden; /* Empêche le défilement de l’arrière-plan */
+}
+
+.modal-Recipe {
+  background: #f8f9fa; /* Couleur neutre et lumineuse */
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh; /* Limite la hauteur de la modale */
+  overflow-y: auto; /* Permet le défilement vertical à l’intérieur */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  animation: slideDown 0.1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin-top: 0;
+  color: #495057; /* Couleur de texte neutre */
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #6c757d; /* Texte subtil */
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ced4da; /* Couleur grise neutre */
+  border-radius: 6px;
+  font-size: 16px;
+  background: #ffffff; /* Fond clair */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #6c757d; /* Accentuation discrète */
+  box-shadow: 0 0 5px rgba(108, 117, 125, 0.2); /* Légère ombre au focus */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 100ms;
+  margin-right: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  margin-left: 10px;
+}

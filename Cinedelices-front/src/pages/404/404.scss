@@ -1,0 +1,58 @@
+@use '../../styles/_variables' as v;
+@use '../../styles/reset';
+@use '../../styles/_fonts' as f;
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+    img {
+        display: block;
+        margin-bottom: 1rem; 
+        text-align: center; 
+        width: 50rem;
+    }
+    h2 {
+        display: block;
+        margin-top: 2rem; 
+        text-align: center; 
+    }
+}
+
+.error-page-text {
+    font-family: f.$font-cinzel;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+
+    p {
+        font-size: f.$font-size-p;
+        color: v.$color-black;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem;
+    }
+}
+
+.error-button {
+    background-color: v.$color-light-grey;
+    color: v.$color-yellow;
+    border: none;
+    padding: 0.1rem 1rem;
+    border-radius: 20px;
+    font-family: v.$font-cinzel;
+    font-size: f.$font-size-h3;
+    font-weight: bold; 
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: inherit; 
+    }
+}

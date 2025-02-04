@@ -1,0 +1,62 @@
+@use "../../../styles/_fonts.scss" as f;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_variables.scss" as v;
+
+
+footer {
+    background-color: v.$color-red;
+    color: v.$color-yellow;
+    font-family: f.$font-cinzel;
+    padding: 1rem 0; /* Ajoute du padding pour aérer un peu */
+    text-align: center; /* Centre le texte pour les petits écrans */
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Enlève les puces */
+    display: flex;
+    flex-direction: column; /* Arrange les éléments en colonne pour le mobile */
+    align-items: center; /* Centre les items */
+}
+
+footer ul li {
+    margin-top: 1rem; /* Réduit l'espacement vertical entre les items */
+}
+
+.footer-item a {
+    color: v.$color-yellow;
+    text-decoration: none; /* Enlève le soulignement */
+}
+
+.footer-item {
+    font-size: f.$font-size-h4; /* Taille ajustée pour être lisible sur mobile */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    footer ul {
+        flex-direction: row; /* Arrange les items en ligne pour les tablettes */
+        justify-content: space-evenly; /* Répartit uniformément les items */
+    }
+
+    footer ul li {
+        margin-top: 0;
+        margin-left: 1rem; /* Ajoute un espacement horizontal entre les items */
+    }
+
+    .footer-item {
+        font-size: f.$font-size-h4; /* Augmente la taille de la police pour plus de lisibilité */
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        padding: 2rem 0; /* Ajoute plus d'espace pour les grands écrans */
+    }
+
+    .footer-item {
+        font-size: f.$font-size-h3; /* Augmente encore la taille de la police pour les grands écrans */
+    }
+}

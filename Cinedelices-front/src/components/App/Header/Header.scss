@@ -1,0 +1,29 @@
+@use "../../../styles/_fonts.scss" as f;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_variables.scss" as v;
+
+// Header container
+.header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: v.$color-red;
+    padding: 1rem;
+    font-family: f.$font-roboto;
+    padding-inline: 5rem;
+    // position:fixed;
+    z-index:10;
+    
+}
+
+.search-results-list {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: v.$color-red;
+  border-radius: 0 0 10px 10px;
+}

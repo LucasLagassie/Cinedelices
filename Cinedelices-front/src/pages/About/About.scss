@@ -1,0 +1,88 @@
+@use '../../styles/variables' as v;
+@use '../../styles/reset';
+@use '../../styles/fonts' as f;
+
+.about-page {
+    .about {
+      display: flex;
+      flex-direction: column;  // Colonne par défaut pour le mobile-first
+      gap: 1rem;
+      padding: 2rem;
+      margin: 0.5rem auto;
+      max-width: 1200px;  // Limite la largeur max sur grands écrans
+  
+      h1 {
+        font-size: f.$font-size-h1;
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+  
+      section {
+        display: flex;
+        flex-direction: column;  // Colonne par défaut pour mobile
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: v.$color-light-red;
+        border-radius: 20px;
+        box-shadow: v.$color-shadow;
+        max-width: 1000px;  // Limitation de la taille des sections
+  
+        h2 {
+          font-size: f.$font-size-h2;
+          margin: 0;
+        }
+  
+        p {
+          font-size: f.$font-size-p;
+          line-height: 1.5;
+          padding: 1.5rem;
+        }
+  
+        img {
+            width: 100%; 
+            max-width: 400px;  // Limite la largeur maximale des images
+            height: 250px;  // Fixe une hauteur identique pour toutes les images
+            object-fit: cover;  // Assure que l'image garde un bon ratio et se coupe proprement si nécessaire
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+// Pour les écrans larges (à partir de 768px) : changement en "row"
+@media (min-width: 768px) {
+    .about-page {
+      .about {
+        gap: 2rem;
+        
+        section {
+        max-width: 100%;  // Utilise toute la largeur disponible
+        display: flex;
+        flex-direction: row;  // Passe en ligne pour les grands écrans
+        align-items: flex-start;  // Aligne les éléments au début
+        justify-content: space-between;  // Sépare le texte et l'image
+        padding: 2rem;
+      }
+  
+      
+  
+        div {
+          max-width: 45%;  // Texte prend 45% de la largeur
+          text-align: left;
+        }
+  
+        img {
+          max-width: 50%;  // Image prend 50% de la largeur
+          height: auto;  // S'assure que l'image garde ses proportions
+        }
+  
+        p {
+          padding: 1.5rem;  // Réduction des paddings pour un design plus compact
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+  
+  

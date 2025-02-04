@@ -1,0 +1,149 @@
+@use "../../styles/_fonts" as f;
+@use "../../styles/_reset";
+@use "../../styles/_variables" as v;
+
+.homepage {
+    background-color: v.$color-white;
+}
+.welcome-message {
+    margin:5rem;
+    color: v.$color-red;
+    text-align:center;
+    font-size:2rem;
+    font-family: v.$font-cinzel;
+    font-weight:bold;
+}
+
+.landing_page {
+    background-color: v.$color-light-yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+    
+.image_container {
+        max-width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+}
+
+.slogan {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+        h1 {
+            font-size: f.$font-size-h1;
+            color: v.$color-grey;
+            font-family: f.$font-cinzel;
+        }
+
+        h2 {
+            font-size: f.$font-size-h3;
+            color: v.$color-grey;
+            font-family: f.$font-cinzel;
+        }
+}
+
+.subscribe_button {
+        background-color: v.$color-light-grey;
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+}
+      
+.subscribe_button a {
+        color: v.$color-yellow; 
+        text-transform: uppercase;
+        font-size: f.$font-size-h2;
+        text-decoration: none;
+}
+
+.last-recipes {
+    min-height: 100vh;
+    margin: 0 15vw ;
+    background-color: v.$color-light-red;
+    box-shadow: -10px 0px 15px rgba(253, 173, 173, 0.3), 10px 0px 15px rgba(253, 173, 173, 0.3),;
+    border-radius: 20px;
+    z-index: 0;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: f.$font-size-h1;
+    color: v.$color-grey;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.cards-container {
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    width: 18.75rem;
+    height: 18.75rem;
+    margin-top: 2rem; 
+    position: relative;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: f.$font-size-h3;
+}
+
+.recipes_button {
+    display: block;
+    margin: auto;
+    background-color: v.$color-light-grey;
+    border: none;
+    padding: 0.1rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+  
+.recipes_button a {
+    color: v.$color-yellow; 
+    text-transform: uppercase;
+    font-size: f.$font-size-h2;
+    text-decoration: none;
+}
+
+@media (min-width: 760px) {
+    .landing_page {
+        background-color: v.$color-light-yellow;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+  
+  
+  

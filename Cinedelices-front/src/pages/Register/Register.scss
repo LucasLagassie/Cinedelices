@@ -1,0 +1,87 @@
+@use "../../styles/fonts" as f;
+@use "../../styles/reset";
+@use "../../styles/variables" as v;
+
+h2 {
+    font-family: f.$font-size-h2;
+    // text-shadow: v.$color-shadow;
+    font-weight: bold;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column; 
+    width: 100%; 
+}
+
+.form-wrapper input {
+    color: v.$color-grey;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: v.$color-light-red;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    box-shadow: v.$color-shadow;
+
+    label {
+        font-family: f.$font-roboto;
+        color: v.$color-grey;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    input {
+        padding: 0.75rem;
+        border-radius: 20px;
+        font-size: f.$font-size-h3;
+        border: none;
+        outline: none;
+        background-color: v.$color-form;
+        color: v.$color-grey;
+        box-shadow: v.$color-shadow;
+        width: 100%; 
+    }
+
+    button {
+        color: v.$color-yellow; 
+        text-transform: uppercase;
+        font-size: f.$font-size-h3;
+        text-decoration: none;
+        background-color: v.$color-light-grey;
+        border: none;
+        padding: 0.1rem 1rem;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-top: 3rem;
+    }
+    
+    fieldset {
+        border: 2px solid v.$color-light-grey;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        width: 100%; 
+    }
+    
+    legend {
+        font-family: f.$font-cinzel;
+        font-size: f.$font-size-h3;
+        color: v.$color-grey;
+        padding: 0 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 1.5rem;
+    }
+}

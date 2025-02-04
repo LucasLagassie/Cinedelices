@@ -1,0 +1,64 @@
+@use '../../styles/_variables' as v;
+@use '../../styles/reset';
+@use '../../styles/_fonts' as f;
+
+.container {
+    min-height: 100vh;
+    margin: 0 15vw ;
+    background-color: v.$color-light-red;
+    box-shadow: -10px 0px 15px rgba(253, 173, 173, 0.3), 10px 0px 15px rgba(253, 173, 173, 0.3),;
+    border-radius: 20px;
+    z-index: 0;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: f.$font-size-h1;
+    color: v.$color-grey;
+    width: 100%;
+    border-bottom: 1px solid v.$color-grey;
+    text-align: left !important;
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+article {
+    h3 {
+        font-family: f.$font-cinzel;
+        color: v.$color-red;
+        font-weight: bold;
+        font-size:1rem;
+        text-align:left;
+    }
+}
+.cards-container {
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    height: 100%;
+    padding-bottom: 3rem;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    width: 18.75rem;
+    height: 18.75rem;
+    margin-top: 2rem; 
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card h2 {
+     font-size: f.$font-size-h3;
+
+}

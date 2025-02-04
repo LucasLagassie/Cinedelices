@@ -1,0 +1,84 @@
+@use "../../../styles/_fonts.scss" as f;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_variables.scss" as v;
+
+// Header authentication
+.header-auth {
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.auth-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+.auth-item a {
+    color: v.$color-yellow;
+}
+.user-info  {
+  display:flex;
+  span {
+  padding-inline: 1rem;
+}
+}
+.user-info::nth-child(2) {
+  margin-top: 1rem;
+}
+.auth-item {
+  font-size: f.$font-size-h3;
+  font-weight: bold;  
+  color: v.$color-yellow;
+  margin-left: 1rem;
+}
+.auth-item:nth-child(2) a {
+  
+  border-radius: 20px;
+  color: v.$color-yellow;
+  transition: 200ms;
+}
+
+
+.active {
+  display: none;
+}
+
+// .logged-in {
+//   display: flex;
+// }
+
+.logged-out {
+  display: flex;
+}
+
+@media (min-width: 760px) {
+
+  .active {
+    display: block;
+  }
+  .auth-list {
+    display: flex;
+  }
+  .auth-item {
+    span {
+  
+      &:nth-of-type(2) {
+        // Vos styles spécifiques au deuxième <span>
+        margin-top: 2rem;
+        margin-left:1rem;
+        margin-right:4.5rem;
+      }
+    }  
+  }
+  .auth-item:nth-of-type(2) {
+    span {
+      // Vos styles spécifiques
+      margin-top: 1.5rem;
+      margin-left:1rem;
+    }
+  }
+
+}

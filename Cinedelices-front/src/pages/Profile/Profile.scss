@@ -1,0 +1,110 @@
+@use "../../styles/_fonts" as f;
+@use "../../styles/_reset";
+@use "../../styles/_variables" as v;
+
+.header-profile {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.header-profile .username {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    font-weight: normal;
+    font-family: f.$font-roboto;
+}
+
+.container-profile {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    min-height: 100vh;
+}
+.manage-container {
+    border-right: solid 3px v.$color-light-yellow;
+}
+.manage-container button {
+    width: 100%;
+    border: none;
+    margin: 1rem 0;
+    background-color: transparent;
+    transition: 200ms;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: bisque;
+    }
+}
+
+.profile-container {
+    margin: 0 15%;
+    border-top: solid 3px v.$color-light-yellow;
+    padding-top: 5rem;
+
+    h1 {
+        font-family: f.$font-roboto;
+        font-weight:normal;
+    }
+
+    h2 {
+        font-family: f.$font-roboto;
+        font-weight:normal;
+        text-align:left;
+        margin-left:1.5rem;
+    }
+    
+    button {
+        margin-top: 5rem;
+        border: none;
+        padding: 1rem;
+        border-radius: 5rem;
+        cursor: pointer;
+        background-color: v.$color-red;
+        color: v.$color-yellow;
+    }
+}
+
+.profile-container input{
+        border: none;
+        text-align: center;
+        background-color: rgba(221, 208, 208, 0.233);
+        margin: 1rem 0;
+        border-radius: 5rem;
+        padding: 0.5rem 10rem;
+}
+.profile-picture {
+    position: relative;
+}
+.profile-picture img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-pseudo {
+    display: flex;  
+}
+.profile-mail {
+    display: flex;
+}
+svg {
+    cursor: pointer;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    height: 2rem;
+    width: 2rem;
+}

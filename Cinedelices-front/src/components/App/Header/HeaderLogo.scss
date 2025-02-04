@@ -1,0 +1,26 @@
+@use "../../../styles/_fonts.scss" as f;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_variables.scss" as v;
+
+// Header logo
+.header-logo {
+    width: 10rem;
+    height: 10rem;
+    min-width: 5rem;
+    margin-top: 8rem;
+    // position:fixed;
+    // z-index:10;
+    
+    img .logo {
+    display: block;
+    position: absolute;
+  }
+}
+
+
+@media (min-width: 760px) {
+    .header-logo {
+        margin-top: 10rem;
+        min-width: 5rem;
+    }
+}

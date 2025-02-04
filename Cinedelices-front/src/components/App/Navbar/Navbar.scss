@@ -1,0 +1,86 @@
+@use "../../../styles/_fonts.scss" as f;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_variables.scss" as v;
+
+.navbar {
+  background-color: #FDEDCB;
+  padding-top: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Ombre subtile en bas */
+}
+
+.navbar-list {
+  
+  display:none;
+
+}
+
+.navbar-item {
+  font-family: f.$font-cinzel;
+  font-size:  f.$font-size-h3;
+  font-weight: bold;  
+  z-index:0;
+  // color: v.$color-red;
+  // margin: 1rem;
+  
+}
+
+
+
+li a {
+  text-decoration: none;
+  color: v.$color-red;
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media (min-width: 760px) {
+  
+ ul.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+   
+    
+    
+    li {
+      margin: 0 1rem;
+    }
+
+
+   .navbar-list {
+    padding: 0 1rem;
+   }
+ }
+.navbar-item:nth-child(4),
+// .navbar-item:nth-child(5),
+.navbar-item:nth-child(6) {
+  display: none;
+}
+
+.none {
+  display: none;
+}
+
+li a {
+  position: relative;
+}
+.navbar-item a:after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  height: 1px;
+  background-color: v.$color-yellow;
+  left: 0;
+  width: 0;
+  transition: ease-in-out 400ms;
+}
+
+.navbar-item a:hover:after {
+  width: 100%;
+
+}
+}
